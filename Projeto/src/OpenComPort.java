@@ -10,7 +10,7 @@ public class OpenComPort {
         comPort.setBaudRate(9600);
         comPort.openPort();
         comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
-        Commands.ReceivingENQS(comPort);
+        new commands(comPort);
         comPort.closePort();
     }
 }
